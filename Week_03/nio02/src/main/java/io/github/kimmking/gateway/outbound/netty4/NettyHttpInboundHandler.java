@@ -4,51 +4,31 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelPromise;
+import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.DecoderResult;
+import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpContent;
 import io.netty.handler.codec.http.HttpRequest;
 import lombok.extern.slf4j.Slf4j;
 
+import java.nio.charset.Charset;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class NettyHttpInboundHandler extends ChannelInboundHandlerAdapter {
+public class NettyHttpInboundHandler extends SimpleChannelInboundHandler<FullHttpResponse> {
 
     private String content;
     private ChannelPromise promise;
 
+
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        promise = ctx.newPromise();
-        if (msg instanceof HttpRequest) {
-            HttpRequest httpRequest = (HttpRequest) msg;
-            DecoderResult decoderResult = httpRequest.decoderResult();
-            if (decoderResult.isFailure()) {
-                return;
-            }
-        }
-        if (msg instanceof HttpContent) {
-            HttpContent httpContent = (HttpContent) msg;
-            ByteBuf buf = httpContent.content();
-            byte[] bytes = new byte[buf.readableBytes()];
-            buf.readBytes(bytes);
-            content = new String(bytes, "UTF-8");
-            promise.setSuccess();
-            ctx.writeAndFlush(content);
-        }
+    protected void channelRead0(ChannelHandlerContext ctx, FullHttpResponse response) throws Exception {
+        content = response.content().toString(Charset.forName("utf-8"));
+        System.out.println("收到服务端返还结果========>"+content);
     }
 
-    public synchronized String getResult() {
-        try {
-            while (promise == null) {
-                TimeUnit.MILLISECONDS.sleep(2);
-            }
-            promise.await(5,TimeUnit.MILLISECONDS);
-            return content;
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public String getResult() {
+        return content;
     }
 
     @Override

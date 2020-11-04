@@ -20,7 +20,7 @@ public class HttpRequestParam {
     private HttpMethod httpMethod;
     private HttpHeaders httpHeaders;
     private Body body;
-    private ChannelHandlerContext ctx;
+//    private ChannelHandlerContext ctx;
 
     @Data
     @Builder

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cfe4cd19-1b04-463f-a5d6-a30e45fb5528" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/HttpServerResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/httpclient/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/httpclient/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/filter/HttpRequestFilterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/filter/HttpRequestFilterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/inbound/HttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/inbound/HttpInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/inbound/HttpInboundInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/inbound/HttpInboundInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/HttpRequestParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/HttpRequestParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpClientOutboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpClientOutboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/router/HttpEndpointRouterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/router/HttpEndpointRouterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/endpoint.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/endpoint.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1jokq5lpQwkDaZxcJ0MNo2qxq63" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.NettyHttpClient">
+    <configuration name="NettyHttpClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.kimmking.gateway.outbound.netty4.NettyHttpClient" />
+      <module name="netty-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.kimmking.gateway.outbound.netty4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NettyServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.kimmking.gateway.NettyServerApplication" />
+      <module name="netty-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.kimmking.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NettyHttpClient" />
+        <item itemvalue="Application.NettyServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfe4cd19-1b04-463f-a5d6-a30e45fb5528" name="Default Changelist" comment="" />
+      <created>1604478019188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604478019188</updated>
+      <workItem from="1604478022698" duration="8636000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1147" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1604485773463">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state x="-1147" y="171" key="#com.intellij.ide.util.MemberChooser/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604485773463" />
+    <state x="-1197" y="168" key="#xdebugger.evaluate" timestamp="1604482940383">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state x="-1197" y="168" key="#xdebugger.evaluate/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604482940383" />
+    <state width="1878" height="315" key="GridCell.Tab.0.bottom" timestamp="1604486737543">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.0.bottom/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737543" />
+    <state width="1878" height="315" key="GridCell.Tab.0.center" timestamp="1604486737543">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.0.center/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737543" />
+    <state width="1878" height="315" key="GridCell.Tab.0.left" timestamp="1604486737542">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.0.left/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737542" />
+    <state width="1878" height="315" key="GridCell.Tab.0.right" timestamp="1604486737543">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.0.right/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737543" />
+    <state width="1878" height="315" key="GridCell.Tab.1.bottom" timestamp="1604486737544">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.1.bottom/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737544" />
+    <state width="1878" height="315" key="GridCell.Tab.1.center" timestamp="1604486737544">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.1.center/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737544" />
+    <state width="1878" height="315" key="GridCell.Tab.1.left" timestamp="1604486737544">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.1.left/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737544" />
+    <state width="1878" height="315" key="GridCell.Tab.1.right" timestamp="1604486737544">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state width="1878" height="315" key="GridCell.Tab.1.right/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604486737544" />
+    <state x="-1295" y="184" width="670" height="676" key="search.everywhere.popup" timestamp="1604483626910">
+      <screen x="-1920" y="-31" width="1920" height="978" />
+    </state>
+    <state x="-1295" y="184" width="670" height="676" key="search.everywhere.popup/-1920.-31.1920.978/0.23.1440.877@-1920.-31.1920.978" timestamp="1604483626910" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/kimmking/gateway/outbound/netty4/NettyHttpClientOutboundHandler.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

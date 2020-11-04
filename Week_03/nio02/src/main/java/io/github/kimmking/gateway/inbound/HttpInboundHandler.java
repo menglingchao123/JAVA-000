@@ -42,6 +42,8 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
 //            }
 
 //            handler.handle(fullRequest, ctx);
+            String content = fullRequest.content().toString(CharsetUtil.UTF_8);
+            System.out.println("网关收到客户端请求参数"+content);
             DefaultFullHttpRequest request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1,fullRequest.method(),fullRequest.uri(),fullRequest.content());
             ctx.fireChannelRead(request);
         } catch(Exception e) {
