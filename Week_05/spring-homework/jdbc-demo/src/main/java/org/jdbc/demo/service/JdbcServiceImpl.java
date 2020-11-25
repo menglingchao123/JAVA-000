@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * jdbc作业1:通过jdbc实现增删改查操作
+ *
  * @author lingchaomeng
  * @Date 2020/11/17
  */
@@ -27,11 +28,12 @@ public class JdbcServiceImpl implements JdbcService {
     public List<User> select(User user) {
         String sql = "select * from user where id = ? and name = ? and email = ?";
         //获取连接
-        Connection connection = jdbcConfiguration.getConnection();
-        PreparedStatement preparedStatement = null;
-        try {
-            //创建连接通道
-            preparedStatement = connection.prepareStatement(sql);
+
+        try (
+                Connection connection = jdbcConfiguration.getConnection();
+                //创建连接通道
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        ) {
             //设置请求参数
             preparedStatement.setInt(1, user.getId());
             preparedStatement.setString(2, user.getName());
@@ -50,75 +52,63 @@ public class JdbcServiceImpl implements JdbcService {
             return users;
         } catch (SQLException t) {
             t.printStackTrace();
-        } finally {
-            jdbcConfiguration.closeStatement(preparedStatement);
-            jdbcConfiguration.closeConnection(connection);
         }
         return Collections.emptyList();
     }
 
     public void insert(User user) {
         String sql = "INSERT INTO user (id,`name`,email) VALUES (?,?,?)";
-        //获取连接
-        Connection connection = jdbcConfiguration.getConnection();
-        PreparedStatement p = null;
-        try {
+        try (
+                Connection connection = jdbcConfiguration.getConnection();
+                //获取连接
+                PreparedStatement p = connection.prepareStatement(sql);
+        ) {
             connection.setAutoCommit(false);
-            p = connection.prepareStatement(sql);
             p.setInt(1, user.getId());
             p.setString(2, user.getName());
             p.setString(3, user.getEmail());
             p.execute();
             connection.commit();
         } catch (SQLException t) {
-            jdbcConfiguration.rollback(connection);
+            jdbcConfiguration.rollback(jdbcConfiguration.getConnection());
             t.printStackTrace();
-        } finally {
-            jdbcConfiguration.closeStatement(p);
-            jdbcConfiguration.closeConnection(connection);
         }
     }
 
     public void update(User user) {
         String sql = "update user set name = ?,email = ? where id = ?";
-        //获取连接
-        Connection connection = jdbcConfiguration.getConnection();
-        PreparedStatement p = null;
-        try {
+        try (
+                //获取连接
+                Connection connection = jdbcConfiguration.getConnection();
+                PreparedStatement p = connection.prepareStatement(sql);
+        ) {
             connection.setAutoCommit(false);
-            p = connection.prepareStatement(sql);
             p.setString(1, user.getName());
             p.setString(2, user.getEmail());
             p.setInt(3, user.getId());
             p.execute();
             connection.commit();
         } catch (SQLException t) {
-            jdbcConfiguration.rollback(connection);
+            jdbcConfiguration.rollback(jdbcConfiguration.getConnection());
             t.printStackTrace();
-        } finally {
-            jdbcConfiguration.closeStatement(p);
-            jdbcConfiguration.closeConnection(connection);
         }
     }
 
     public void delete(User user) {
         String sql = "delete from user where id = ? and name = ? and email = ?";
-        Connection connection = jdbcConfiguration.getConnection();
-        PreparedStatement p = null;
-        try {
+        try (
+                Connection connection = jdbcConfiguration.getConnection();
+                PreparedStatement p = connection.prepareStatement(sql);
+        ) {
             connection.setAutoCommit(false);
-            p = connection.prepareStatement(sql);
             p.setInt(1, user.getId());
             p.setString(2, user.getName());
             p.setString(3, user.getEmail());
             p.execute();
             connection.commit();
         } catch (SQLException t) {
-            jdbcConfiguration.rollback(connection);
+            jdbcConfiguration.rollback(jdbcConfiguration.getConnection());
             t.printStackTrace();
-        } finally {
-            jdbcConfiguration.closeStatement(p);
-            jdbcConfiguration.closeConnection(connection);
         }
     }
 }

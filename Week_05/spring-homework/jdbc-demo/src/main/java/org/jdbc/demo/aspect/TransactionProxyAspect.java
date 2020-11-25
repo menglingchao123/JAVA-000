@@ -13,6 +13,7 @@ import java.sql.Connection;
 
 /**
  * 事务增强的aop实现
+ *
  * @author lingchaomeng
  * @date 2020/11/17
  */
@@ -24,11 +25,10 @@ public class TransactionProxyAspect {
     private JdbcConfiguration jdbcConfiguration;
 
     @Around("@annotation(transaction)")
-    public Object transactionHandle(JoinPoint joinPoint ,Transaction transaction){
-        Connection connection = jdbcConfiguration.getConnection();
-        ProceedingJoinPoint point = (ProceedingJoinPoint) joinPoint;
+    public Object transactionHandle(JoinPoint joinPoint, Transaction transaction) {
         Object result = null;
-        try {
+        try (Connection connection = jdbcConfiguration.getConnection()) {
+            ProceedingJoinPoint point = (ProceedingJoinPoint) joinPoint;
             //开启事务
             connection.setAutoCommit(false);
             //调用方法
@@ -36,10 +36,8 @@ public class TransactionProxyAspect {
             //提交事务
             connection.commit();
         } catch (Throwable t) {
-            jdbcConfiguration.rollback(connection);
+            jdbcConfiguration.rollback(jdbcConfiguration.getConnection());
             t.printStackTrace();
-        }finally {
-            jdbcConfiguration.closeConnection(connection);
         }
         return result;
     }

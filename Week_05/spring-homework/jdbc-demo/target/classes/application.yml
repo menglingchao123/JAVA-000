@@ -3,3 +3,6 @@ jdbc:
   password: meng5351
   url: jdbc:mysql://localhost:3306/dev?useSSL=false&useUnicode=true&characterEncoding=UTF-8
   driver: com.mysql.jdbc.Driver
+demo:
+  username: root
+  password: root
