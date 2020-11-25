@@ -1,0 +1,12 @@
+{
+  "hints": [],
+  "groups": [],
+  "properties": [
+    {
+      "defaultValue": "false",
+      "name": "demo.basic.enable",
+      "description": "Whether to enable basic authentication.",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

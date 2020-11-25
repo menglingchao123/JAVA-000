@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "demo.basic.enable",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable basic authentication.",
+      "defaultValue": "false"
+    }
+  ]
+}
