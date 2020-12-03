@@ -1,0 +1,28 @@
+server:
+  port: 8084
+logging:
+  level:
+    root: info
+spring:
+  datasource:
+    primary:
+      username: root
+      password: meng5351
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db?useUnicode=true&characterEncoding=UTF-8
+    secondary:
+      username: root
+      password: meng5351
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=UTF-8
+    thirdary:
+      username: root
+      password: meng5351
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=UTF-8
+load:
+  balance:
+    list:
+      - "primary"
+      - "secondary"
+      - "thirdary"

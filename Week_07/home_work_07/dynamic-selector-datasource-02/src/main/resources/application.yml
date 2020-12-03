@@ -1,0 +1,15 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: info
+primary:
+  username: root
+  password: meng5351
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/db?useUnicode=true&characterEncoding=UTF-8
+secondary:
+  username: root
+  password: meng5351
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=UTF-8

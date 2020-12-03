@@ -1,0 +1,67 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.example.config.PrimaryDatasource",
+      "name": "datasource1",
+      "type": "org.example.config.PrimaryDatasource"
+    },
+    {
+      "sourceType": "org.example.config.Datasource1",
+      "name": "datasource1",
+      "type": "org.example.config.Datasource1"
+    },
+    {
+      "sourceType": "org.example.config.Datasource2",
+      "name": "datasource2",
+      "type": "org.example.config.Datasource2"
+    },
+    {
+      "sourceType": "org.example.config.SecondDatasource",
+      "name": "second",
+      "type": "org.example.config.SecondDatasource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.example.config.PrimaryDatasource",
+      "name": "datasource1.driver-class-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.PrimaryDatasource",
+      "name": "datasource1.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.PrimaryDatasource",
+      "name": "datasource1.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.PrimaryDatasource",
+      "name": "datasource1.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.SecondDatasource",
+      "name": "second.driver-class-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.SecondDatasource",
+      "name": "second.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.SecondDatasource",
+      "name": "second.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.example.config.SecondDatasource",
+      "name": "second.username",
+      "type": "java.lang.String"
+    }
+  ]
+}

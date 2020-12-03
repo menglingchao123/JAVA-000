@@ -1,0 +1,37 @@
+server:
+  port: 8081
+logging:
+  level:
+    root: info
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    datasource:
+      names: master,slave1,slave2 #指定数据源名称
+      master:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/db?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: meng5351
+      slave1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/db1?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: meng5351
+      slave2:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/db2?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: meng5351
+    masterslave:
+      load-balance-algorithm-type: ROUND_ROBIN #可选值：ROUND_ROBIN(轮询)，RANDOM（随机）
+      name: dataSource #最终数据源名称
+      master-data-source-name: master #指定读写分离主节点
+      slave-data-source-names: slave1,slave2 #指定读写分离从节点
+      props:
+        sql:
+          show: true #开启sql显示
